@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
+import org.springframework.context.annotation.Lazy;
 
 import static java.sql.DriverManager.println;
 
@@ -19,6 +20,7 @@ public class DependsOnConfiguration {
     }
 
     @Bean
+    @Lazy
     public Bar bar() {
         println("Create new Bar");
         return new Bar();
