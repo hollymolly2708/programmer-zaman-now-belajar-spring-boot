@@ -1,6 +1,7 @@
 package com.programmer_zaman_now.belajar_spring_boot.belajar_spring_boot;
 
 import com.programmer_zaman_now.belajar_spring_boot.belajar_spring_boot.data.Connection;
+import com.programmer_zaman_now.belajar_spring_boot.belajar_spring_boot.data.Server;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -24,5 +25,10 @@ public class LifecycleTest {
     @Test
     void testConnection() {
         Connection connection = applicationContext.getBean(Connection.class);
+    }
+
+    @Test
+    void testServer() {
+        Server server = applicationContext.getBean(Server.class);
     }
 }
