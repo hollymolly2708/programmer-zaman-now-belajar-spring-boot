@@ -2,6 +2,6 @@ package com.programmer_zaman_now.belajar_spring_boot.belajar_spring_boot.reposit
 
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class CustomerRepository {
 }
