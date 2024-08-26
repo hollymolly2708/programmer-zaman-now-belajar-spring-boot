@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProductService {
     private ProductRepository productRepository;
-
     @Autowired
     public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
@@ -18,6 +17,7 @@ public class ProductService {
     public ProductService(ProductRepository productRepository, String name) {
         this.productRepository = productRepository;
     }
+
 
     public ProductRepository getProductRepository() {
         return productRepository;
