@@ -2,6 +2,7 @@ package com.programmer_zaman_now.belajar_spring_boot.belajar_spring_boot;
 
 import com.programmer_zaman_now.belajar_spring_boot.belajar_spring_boot.listener.LoginAgainSuccessListener;
 import com.programmer_zaman_now.belajar_spring_boot.belajar_spring_boot.listener.LoginSuccessListener;
+import com.programmer_zaman_now.belajar_spring_boot.belajar_spring_boot.listener.UserListener;
 import com.programmer_zaman_now.belajar_spring_boot.belajar_spring_boot.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,7 +13,7 @@ import org.springframework.context.annotation.Import;
 
 public class EventListenerTest {
     @Configuration
-    @Import({UserService.class, LoginSuccessListener.class, LoginAgainSuccessListener.class})
+    @Import({UserService.class, LoginSuccessListener.class, LoginAgainSuccessListener.class, UserListener.class})
     public static class TestConfiguration {
 
     }
