@@ -9,20 +9,20 @@ import org.springframework.stereotype.Component;
 import java.util.UUID;
 
 @Component
-public class IdGeneratorBeanPostProcessor implements BeanPostProcessor, Ordered {
+public class PrefixIdGeneratorBeanPostProcessor implements BeanPostProcessor, Ordered {
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        System.out.print("Id Generator Processor for Bean {}" + beanName );
+        System.out.print("Prefix Id Generator Processor for Bean {}" + beanName);
         if (bean instanceof IdAware) {
-            System.out.print("Set Id Generator for Bean{}" + "," + beanName);
+            System.out.print("Prefix Set Id Generator for Bean{}" + "," + beanName);
             IdAware idAware = (IdAware) bean;
-            idAware.setId(UUID.randomUUID().toString());
+            idAware.setId("PZN-" + idAware.getId());
         }
         return bean;
     }
 
     @Override
     public int getOrder() {
-        return 1;
+        return 2;
     }
 }
