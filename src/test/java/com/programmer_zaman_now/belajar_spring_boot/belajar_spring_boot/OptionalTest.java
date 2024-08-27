@@ -23,7 +23,7 @@ public class OptionalTest {
         Foo foo = applicationContext.getBean(Foo.class);
         FooBar fooBar = applicationContext.getBean(FooBar.class);
 
-        Assertions.assertNotNull(fooBar.getBar());
+        Assertions.assertNull(fooBar.getBar());
         Assertions.assertSame(foo, fooBar.getFoo());
     }
 
